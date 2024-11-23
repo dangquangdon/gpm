@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:15
+    ports:
+      - "6789:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=loan_manager
+      - POSTGRES_USER=loan_admin
+      - POSTGRES_PASSWORD=secret
+
+volumes:
+  pgdata:
