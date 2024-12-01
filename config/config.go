@@ -19,6 +19,8 @@ type Config struct {
 	RestDbAnonRole string `mapstructure:"REST_DB_ANON_ROLE"`
 	RestJwtSecret  string `mapstructure:"REST_JWT_SECRET"`
 	RestServerPort string `mapstructure:"REST_SERVER_PORT"`
+	RestPreRequest string `mapstructure:"REST_PGRST_DB_PRE_REQUEST"`
+	// NOTE: Also update the map in internal/postgrest.go if new config is added
 }
 
 func LoadConfig(path string) (config Config, err error) {
